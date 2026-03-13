@@ -1,0 +1,35 @@
+/**
+Write a program to generate a random number and let the user guess the number 
+Display message accordingly 
+Negative number to stop
+*/
+import java.util.Scanner;
+public class miniproject
+{
+   public static void main(String[] args)
+   {
+    Scanner sc=new Scanner(System.in);
+    int n,ch;
+    n=(int)(Math.random()*100);
+   
+    while(true)
+    {
+    System.out.println("Guess the number between (1-100)");
+    ch=sc.nextInt();
+    if(n==ch){
+        System.out.println("Hhehe! Perfect");
+        break;
+    }
+    else if(n<ch)
+        System.out.println("Almost there!Try Guessing a lesser number");
+    else if(n>ch)
+        System.out.println("Almost there!Try Guessing a greater number");
+    if(ch<0)
+    {
+      System.out.println("Stopping the excecution");
+      break;
+    }     
+    }
+    
+   }
+}
